@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ever Night Dance</title>
+</head>
+<body>
+    <div id="overlay"></div>
+
+    <div class="message-container">
+        <div id="fullscreenMessage" class="message">Vui lòng bật toàn màn hình để tiếp tục</div>
+        <button id="fullscreenButton">Click vào đây</button>
+        <div id="thankYouMessage" class="message hidden">Cảm ơn bạn đã lắng nghe đến bây giờ,</div>
+        <div id="giftMessage" class="message hidden">và đây là món quà mà tôi dành tặng cho bạn ❤️</div>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <h3 id="welcomeText"></h3>
+        <div class="gif-container">
+            <img src="Dance Evernight GIF.gif" alt="Evernight dance">
+        </div>
+    </div>
+
+    <audio id="music">
+        <source src="eva-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="video-container" id="videoContainer">
+        <video id="videoPlayer" controls>
+            <source src="rickroll.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        /* Lớp phủ đen */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
+            pointer-events: none;
+        }
+
+        /* Container cho các dòng chữ */
+        .message-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+            text-align: center;
+            width: 90%;
+        }
+
+        /* Dòng chữ */
+        .message {
+            font-size: 2.5em;
+            color: white;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin: 20px 0;
+            white-space: normal;
+        }
+
+        /* Button bật fullscreen */
+        #fullscreenButton {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 1.5em;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        #fullscreenButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        #fullscreenButton:active {
+            transform: translateY(0);
+        }
+
+        /* Header chào mừng */
+        h3 {
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            opacity: 0;
+            margin: 30px 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Container GIF */
+        .gif-container {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin-top: 50px;
+        }
+
+        .gif-container img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Video container */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: none;
+            background: black;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Fallback message nếu video không embed được */
+        .video-fallback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 10001;
+        }
+
+        .video-fallback h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .video-fallback p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .video-fallback a {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.5em;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .video-fallback a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
